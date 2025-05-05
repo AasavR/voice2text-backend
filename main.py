@@ -9,6 +9,10 @@ import os
 from pydantic import BaseModel
 
 
+origins = [
+    "https://183f82f2-d8ed-4f20-ae0b-3b18b942c783-00-1zs4sl2hosi0f.worf.replit.dev"
+]
+
 app = FastAPI()
 
 class FormatRequest(BaseModel):
