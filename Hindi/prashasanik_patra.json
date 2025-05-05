@@ -1,0 +1,21 @@
+{
+  "template_name": "प्रशासनिक पत्र",
+  "blocks": [
+    {
+      "id": "header",
+      "name": "संचालनालय सैनिक कल्याण मध्यप्रदेश"
+    },
+    {
+      "id": "subject_reference",
+      "name": "विषय एवं संदर्भ"
+    },
+    {
+      "id": "notification",
+      "name": "सूचना"
+    },
+    {
+      "id": "approval",
+      "name": "अनुमोदन एवं हस्ताक्षर"
+    }
+  ]
+}
