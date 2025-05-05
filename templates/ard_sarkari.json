@@ -1,0 +1,25 @@
+{
+  "template_name": "गोपनीय पत्र / Confidential Letter",
+  "blocks": [
+    {
+      "id": "header",
+      "name": "Header and Contact Information"
+    },
+    {
+      "id": "address",
+      "name": "To Address"
+    },
+    {
+      "id": "subject",
+      "name": "Subject"
+    },
+    {
+      "id": "body",
+      "name": "Body Text"
+    },
+    {
+      "id": "closing",
+      "name": "Closing and Signature"
+    }
+  ]
+}
