@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "template_name": "Sample Template",
   "blocks": [
@@ -15,3 +16,22 @@
     }
   ]
 }
+=======
+{
+  "template_name": "Sample Template",
+  "blocks": [
+    {
+      "id": "introduction",
+      "name": "Introduction"
+    },
+    {
+      "id": "body",
+      "name": "Body"
+    },
+    {
+      "id": "conclusion",
+      "name": "Conclusion"
+    }
+  ]
+}
+>>>>>>> 2df0a5b16486251fb482ea449e7da0de45eb7fba

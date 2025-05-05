@@ -2,11 +2,21 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 #from auth import router as auth_router
 #from wallet import router as wallet_router
+<<<<<<< HEAD
 from .transcribe import router as transcribe_router
+=======
+from transcribe import router as transcribe_router
+>>>>>>> 2df0a5b16486251fb482ea449e7da0de45eb7fba
 
 from fastapi.staticfiles import StaticFiles
 import os
 from pydantic import BaseModel
+<<<<<<< HEAD
+=======
+from vosk import Model
+
+model = Model("model/vosk-model-small-hi-0.22")
+>>>>>>> 2df0a5b16486251fb482ea449e7da0de45eb7fba
 
 
 app = FastAPI()
