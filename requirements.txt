@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+python-multipart
+vosk
+pydantic
+python-jose
+ffmpeg-python
