@@ -1,0 +1,17 @@
+{
+  "template_name": "Sample Template",
+  "blocks": [
+    {
+      "id": "introduction",
+      "name": "Introduction"
+    },
+    {
+      "id": "body",
+      "name": "Body"
+    },
+    {
+      "id": "conclusion",
+      "name": "Conclusion"
+    }
+  ]
+}
