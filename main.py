@@ -7,6 +7,9 @@ from .transcribe import router as transcribe_router
 from fastapi.staticfiles import StaticFiles
 import os
 from pydantic import BaseModel
+from vosk import Model
+
+model = Model("model/vosk-model-small-hi-0.22")
 
 
 app = FastAPI()
