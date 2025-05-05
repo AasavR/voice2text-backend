@@ -5,3 +5,4 @@ vosk
 pydantic
 python-jose
 ffmpeg-python
+python-docx
