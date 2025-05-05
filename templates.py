@@ -93,7 +93,7 @@ def format_transcription(
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error formatting transcription: {str(e)}")
-=======
+        
 from fastapi import APIRouter, HTTPException, Body
 import os
 import json
