@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, HTTPException, Body
 import os
 import json
@@ -190,4 +189,3 @@ def format_transcription(
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error formatting transcription: {str(e)}")
->>>>>>> 2df0a5b16486251fb482ea449e7da0de45eb7fba
