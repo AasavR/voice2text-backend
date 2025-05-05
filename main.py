@@ -31,7 +31,7 @@ app.mount("/temp_audio", StaticFiles(directory=temp_audio_path), name="temp_audi
 #app.include_router(auth_router, prefix="/auth")
 #app.include_router(wallet_router, prefix="/wallet")
 app.include_router(transcribe_router, prefix="/transcribe")
-from .templates import router as templates_router
+from templates import router as templates_router
 app.include_router(templates_router, prefix="/templates")
 
 @app.get("/")
