@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 #from auth import router as auth_router
 #from wallet import router as wallet_router
-from .transcribe import router as transcribe_router
+from transcribe import router as transcribe_router
 
 from fastapi.staticfiles import StaticFiles
 import os
