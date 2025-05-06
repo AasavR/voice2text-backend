@@ -38,7 +38,7 @@ app.include_router(transcribe_router, prefix="/transcribe")
 from templates import router as templates_router
 app.include_router(templates_router, prefix="/templates")
 
-@app.get("/")
+@app.get("/api/templates")
 def read_root():
     return {"message": "Voice2Text API Running"}
 
