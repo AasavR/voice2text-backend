@@ -9,6 +9,9 @@ import os
 from pydantic import BaseModel
 import subprocess
 
+script_path = os.path.join(os.path.dirname(__file__), "download_ffmpeg.sh")
+subprocess.run(["bash", script_path], check=True)
+
 origins = [
     "https://183f82f2-d8ed-4f20-ae0b-3b18b942c783-00-1zs4sl2hosi0f.worf.replit.dev"
 ]
