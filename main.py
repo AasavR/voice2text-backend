@@ -7,7 +7,7 @@ from transcribe import router as transcribe_router
 from fastapi.staticfiles import StaticFiles
 import os
 from pydantic import BaseModel
-
+import subprocess
 
 origins = [
     "https://183f82f2-d8ed-4f20-ae0b-3b18b942c783-00-1zs4sl2hosi0f.worf.replit.dev"
@@ -28,6 +28,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Download ffmpeg binary on startup
+subprocess.run(["bash", "backend/download_ffmpeg.sh"], check=True)
+
 # Serve static files from temp_audio directory
 temp_audio_path = os.path.join(os.path.dirname(__file__), "temp_audio")
 app.mount("/temp_audio", StaticFiles(directory=temp_audio_path), name="temp_audio")
@@ -41,11 +44,3 @@ app.include_router(templates_router, prefix="/templates")
 @app.get("/api/templates")
 def read_root():
     return {"message": "Voice2Text API Running"}
-
-    
-
-# Remove the placeholder /templates/format endpoint to avoid conflict with templates router
-
-# @app.post("/templates/format")
-# async def format_template(request: FormatRequest):
-#     return {"message": "Success", "data": request.dict()}
