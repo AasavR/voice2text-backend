@@ -156,7 +156,6 @@ ________________________________________
         # Return formatted transcription text and download URL (adjust static serving as needed)
         return {
             "text": formatted_text,
-            "raw_text": transcription_text,
             "download_url": f"/temp_audio/{file.filename}.txt"
         }
     except Exception as e:
