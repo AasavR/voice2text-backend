@@ -122,13 +122,41 @@ async def transcribe_audio(file: UploadFile = File(...)):
 
         transcription_text = " ".join(results).strip()
 
-        # Save transcription to text file
-        with open(temp_text_path, "w", encoding="utf-8") as f:
-            f.write(transcription_text)
+        # Wrap transcription text in formatted document style
+        formatted_text = f"""मध्य प्रदेश शासन
+कार्यालय कलेक्टर एवं जिला दण्डाधिकारी
+जिला – ग्वालियर, मध्य प्रदेश
+फोन: 0751-1234567 | ईमेल: collector.gwalior@mp.gov.in | वेबसाइट: www.gwalior.mp.gov.in
+________________________________________
+आदेश
+क्रमांक: 1234/स्थापना/2025
+ग्वालियर, दिनांक: 29/04/2025
+________________________________________
+विषय: राज्यपाल राज्य के स्न असभ्य बौने प्रमुख और केंद्र।
+________________________________________
 
-        # Return transcription text and download URL (adjust static serving as needed)
+{transcription_text}
+
+________________________________________
+(हस्ताक्षर)
+[श्रीमान कलेक्टर का नाम]
+कलेक्टर एवं जिला दण्डाधिकारी
+ग्वालियर, मध्य प्रदेश
+________________________________________
+प्रतिलिपि:
+1.	संबंधित अधिकारी – जानकारी हेतु।
+2.	कार्यालय प्रति – सुरक्षित रखने हेतु।
+3.	समस्त विभागाध्यक्ष – आवश्यक कार्यवाही हेतु।
+"""
+
+        # Save formatted transcription to text file
+        with open(temp_text_path, "w", encoding="utf-8") as f:
+            f.write(formatted_text)
+
+        # Return formatted transcription text and download URL (adjust static serving as needed)
         return {
-            "text": transcription_text,
+            "text": formatted_text,
+            "raw_text": transcription_text,
             "download_url": f"/temp_audio/{file.filename}.txt"
         }
     except Exception as e:
